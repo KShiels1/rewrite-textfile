@@ -1,0 +1,30 @@
+import java.nio.*;
+import java.nio.file.Files;
+import java.io.*;
+
+
+public class ChangeText {
+    public static void main(String[] args) throws Exception {
+       try(
+        BufferedReader br = new BufferedReader(new FileReader("C:/filenam2.txt")); //the file to be read
+        BufferedWriter bw= new BufferedWriter(new FileWriter("C:/filename.txt")); // the file to be writen
+       ){
+        String s;
+       String temp="";
+        int count=0;
+        while ((s = br.readLine()) != null)  {
+ 
+                temp=s;
+            if (temp.matches("^[a-z]+$")) {
+         
+            bw.write(temp + "\n");
+            count++;
+          }
+          if(count>99990
+          ){
+            break;
+        }
+        }
+    }
+    }
+  }
